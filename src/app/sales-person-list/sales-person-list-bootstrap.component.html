@@ -16,7 +16,7 @@
             <td>{{ sp.email }}</td>
             <td>{{ sp.salesVolume | currency: 'USD' }}</td>
             <td>
-                <div *ngIf="sp.salesVolume > 60000; else isLessThanSixtyThousand">Yes</div>
+                <div *ngIf="sp.salesVolume >= 60000; else isLessThanSixtyThousand">Yes</div>
                 <ng-template #isLessThanSixtyThousand>No</ng-template>
             </td>
         </tr>
